@@ -10,6 +10,21 @@ let numero = ''
 let votoBranco = false
 let votos = []
 
+document.body.addEventListener('keypress', function (event) {
+  const key = event.key;
+  const code = event.keypress;
+  //alert(code)
+  
+  //alert(`Key: ${key}`);
+  
+  if(key != 'Enter'){
+    clicou(key);
+  }else if(key == 'Enter'){
+    confirma();
+  }
+  
+});
+
 function comecarEtapa() {
   let etapa = etapas[etapaAtual]
 
@@ -97,6 +112,7 @@ function clicou(n) {
     }
   }
 }
+
 function branco() {
   numero === ''
   votoBranco = true
@@ -111,18 +127,30 @@ function corrige() {
   let somCorrige = new Audio()
   somCorrige.src = 'audios/corrige.mp3'
   somCorrige.play()
+ 
   comecarEtapa()
 }
 function confirma() {
   let etapa = etapas[etapaAtual]
 
+  let candidato = etapa.candidatos.filter(item => {
+    if (item.numero === numero) {
+      return true
+    } else {
+      return false
+    }
+  })
+
+  let nomeObj = candidato[0]['nome']
+  let setorObj = candidato[0]['setor']
+  
   let votoConfirmado = false
   let somConfirma = new Audio('audios/confirma.mp3')
 
   if (votoBranco === true) {
     votoConfirmado = true
     somConfirma.play()
-
+   
     votos.push({
       etapa: etapas[etapaAtual].titulo,
       voto: 'branco'
@@ -138,7 +166,10 @@ function confirma() {
   }
 
   if (votoConfirmado) {
+    console.log(candidato[0]['nome'])
     etapaAtual++
+    
+    registraVoto(nomeObj, setorObj);
     if (etapas[etapaAtual] !== undefined) {
       comecarEtapa()
     } else {
@@ -149,4 +180,20 @@ function confirma() {
   }
 }
 
+function registraVoto(nomeObj,setorObj){
+
+  let nome = nomeObj
+  let setor = setorObj
+  
+  $.ajax({
+    method: 'POST',
+    url: "/urna-main-master/gravar.php",
+    data: {numero: numero,
+          nome: nome,
+        setor: setor},
+}).done(function(result){
+  console.log(result);
+});
+
+}
 comecarEtapa()

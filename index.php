@@ -22,20 +22,14 @@
                             <div class="numero"></div>
                         </div>
                         <div class="d-1-4">
-                            Nome: FULANO<br/>
-                            Partido: NOVO<br/>
-                            Vice-Prefeito: BELTRANO<br/>
+                           
                         </div>
                     </div>
                     <div class="d-1-right">
                         <div class="d-1-image">
-                            <img src="Images/hagar.PNG" alt="" />
-                            Prefeito
+                            
                         </div>
-                        <div class="d-1-image small">
-                            <img src="Images/guy.PNG" alt="" />
-                            Vice-Prefeito
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="d-2">
@@ -78,9 +72,10 @@
             
         </div>
 
-        <h2><a href="index.html" target="_self"><strong>Recarregar</strong></a></h2>
+        <h2><a href="index.php" target="_self"><strong>Recarregar</strong></a></h2>
         
         <link rel="stylesheet" href="css/style.css" />
+        <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/etapas.js"></script>
         <script src="js/script.js"></script>
 
