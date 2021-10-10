@@ -10,20 +10,27 @@ let numero = ''
 let votoBranco = false
 let votos = []
 
-document.body.addEventListener('keypress', function (event) {
+document.body.addEventListener('keydown', function (event) {
   const key = event.key;
-  const code = event.keypress;
-  //alert(code)
-  
+ 
   //alert(`Key: ${key}`);
   
-  if(key != 'Enter'){
+  if((apenasNum(key) || key == 0) && key != ' '){
+    //alert('deu');
     clicou(key);
   }else if(key == 'Enter'){
     confirma();
+  }else if(key == 'Backspace'){
+    corrige();
   }
   
 });
+
+function apenasNum(string){
+  var numStr = string.replace(/[^0-9]/g,'');
+
+  return parseInt(numStr);
+}
 
 function comecarEtapa() {
   let etapa = etapas[etapaAtual]
@@ -187,7 +194,7 @@ function registraVoto(nomeObj,setorObj){
   
   $.ajax({
     method: 'POST',
-    url: "/urna-main-master/gravar.php",
+    url: "/urna-main/database/gravar.php",
     data: {numero: numero,
           nome: nome,
         setor: setor},

@@ -8,7 +8,7 @@ let etapas = [
                 nome:'DR ZÉ LUIS',
                 setor:'TRANSPORTE',
                 fotos:[
-                    {url:'dr_ze_luis.jpg', legenda: 'SDHDS'},
+                    {url:'40.jpg', legenda: 'SDHDS'},
                 ]
             },
             {
@@ -16,7 +16,7 @@ let etapas = [
                 nome:'ALDI BORGES',
                 setor:'COSAN',
                 fotos:[
-                    {url:'aldi_borges.jpg', legenda: 'SDHDS'},
+                    {url:'55.jpg', legenda: 'SDHDS'},
                 ]
             },
             {
@@ -24,7 +24,15 @@ let etapas = [
                 nome:'JOEL DA PIZZARIA',
                 setor:'COTIC',
                 fotos:[
-                    {url:'joel.jpeg', legenda: 'SDHDS'},
+                    {url:'77.jpg', legenda: 'SDHDS'},
+                ]
+            },
+            {
+                numero:'15',
+                nome:'MARILIA CANOA',
+                setor:'CEBEN',
+                fotos:[
+                    {url:'15.jpg', legenda: 'SDHDS'},
                 ]
             },
         ]
