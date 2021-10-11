@@ -1,0 +1,9 @@
+create database db_vt_servidor_destaque_2021;
+
+use db_vt_servidor_destaque_2021;
+create table contagem_votos (
+id int auto_increment primary key not null,
+nome varchar(50) not null,
+setor varchar(50) not null,
+numero int not null
+);
