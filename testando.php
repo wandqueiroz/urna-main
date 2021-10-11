@@ -14,19 +14,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
-
-
     <title>Servidor Destaque SDHDS/2021</title>
 </head>
 
 <body>
+    <div class="section">
 
-
-    <div class="container-fluid">
-
-
-        <div class="swiper-wrapper">
-            <div class="card text-center ">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                <div class="card text-center ">
                 <h5 class="card-title">CONTAGEM DOS VOTOS</h5>
                 <div class="card-body">
                     <table class="table table-warning table-striped">
@@ -57,50 +54,13 @@
                     </table>
                 </div>
             </div>
-
-            <div class="card text-center">
-                <h5 class="card-title">CONTAGEM DOS VOTOS 2</h5>
-                <div class="card-body">
-
-                    <?php
-
-
-
-                    for ($i = 0; count($dados) > $i; $i++) {
-
-                    ?>
-
-                        <div class="container">
-                            <div class="row row-cols-4">
-                                <div class="col-sm-2">
-                                    <img class="img-thumbnail" alt="<?php echo $dados[$i]['nome'] ?>" src="./Images/<?php echo $dados[$i]['numero'] ?>.jpg">
-                                </div>
-                                <div class="col-sm-9">
-                                    <div class="row">
-                                        <div class="col-8 col-sm-6">
-                                            <h6><?php echo $dados[$i]['numero']; ?> - <?php echo $dados[$i]['nome']; ?> - <?php echo $dados[$i]['setor']; ?> </h6>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-4 col-sm-12">
-                                            <div class="progress" style="height: 40px;">
-                                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?php echo $dados[$i]['votos']; ?>%;" aria-valuenow="<?php echo $dados[$i]['votos']; ?>" aria-valuemin="0" aria-valuemax="<?php echo $dados[$i]['votos']; ?>"><strong><?php echo $dados[$i]['votos']; ?> VOTOS</strong></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                </br>
-
-                            <?php } ?>
-                            </div>
-
-                        </div>
-
-
                 </div>
+                <div class="col">
+                   
+                </div>
+
             </div>
+        </div>
 </body>
 
 </html>
