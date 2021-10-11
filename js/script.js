@@ -28,7 +28,6 @@ document.body.addEventListener('keydown', function (event) {
 
 function apenasNum(string){
   var numStr = string.replace(/[^0-9]/g,'');
-
   return parseInt(numStr);
 }
 
