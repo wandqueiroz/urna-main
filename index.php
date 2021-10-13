@@ -72,7 +72,7 @@
             
         </div>
 
-        <h2><a href="index.php" target="_self"><strong>Recarregar</strong></a></h2>
+        <!-- <h2><a href="index.php" target="_self"><strong>Recarregar</strong></a></h2> -->
         
         <link rel="stylesheet" href="css/style.css" />
         <script src="js/jquery-3.6.0.min.js"></script>

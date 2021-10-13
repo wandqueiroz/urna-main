@@ -22,16 +22,18 @@ header("Refresh:5");
 <body>
     <div class="container-fluid">
         <div class="header">
-        <img class="rounded mx-auto d-block" src="./Images/sd2.svg">
+            <img class="rounded mx-auto d-block" src="./Images/sd2.svg">
         </div>
-        <div class="section">
+        <div class="section text-center">
+            <h1 class="title-site">Eleição Servidor Destaque</h1>
+            <br>
             <div class="container text-center">
                 <div class="row">
-                    <div class="col">
+                    <div class="col col1">
 
                         <h5>CONTAGEM DOS VOTOS</h5>
 
-                        <table class="table table-warning table-striped">
+                        <table class="table table-striped">
                             <tr>
                                 <th>NÚMERO</th>
                                 <th>NOME</th>

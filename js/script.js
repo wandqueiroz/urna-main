@@ -12,22 +12,22 @@ let votos = []
 
 document.body.addEventListener('keydown', function (event) {
   const key = event.key;
- 
+
   //alert(`Key: ${key}`);
-  
-  if((apenasNum(key) || key == 0) && key != ' '){
+
+  if ((apenasNum(key) || key == 0) && key != ' ') {
     //alert('deu');
     clicou(key);
-  }else if(key == 'Enter'){
+  } else if (key == 'Enter') {
     confirma();
-  }else if(key == 'Backspace'){
+  } else if (key == 'Backspace') {
     corrige();
   }
-  
+
 });
 
-function apenasNum(string){
-  var numStr = string.replace(/[^0-9]/g,'');
+function apenasNum(string) {
+  var numStr = string.replace(/[^0-9]/g, '');
   return parseInt(numStr);
 }
 
@@ -133,7 +133,7 @@ function corrige() {
   let somCorrige = new Audio()
   somCorrige.src = 'audios/corrige.mp3'
   somCorrige.play()
- 
+
   comecarEtapa()
 }
 function confirma() {
@@ -149,14 +149,14 @@ function confirma() {
 
   let nomeObj = candidato[0]['nome']
   let setorObj = candidato[0]['setor']
-  
+
   let votoConfirmado = false
   let somConfirma = new Audio('audios/confirma.mp3')
 
   if (votoBranco === true) {
     votoConfirmado = true
     somConfirma.play()
-   
+
     votos.push({
       etapa: etapas[etapaAtual].titulo,
       voto: 'branco'
@@ -174,7 +174,7 @@ function confirma() {
   if (votoConfirmado) {
     console.log(candidato[0]['nome'])
     etapaAtual++
-    
+
     registraVoto(nomeObj, setorObj);
     if (etapas[etapaAtual] !== undefined) {
       comecarEtapa()
@@ -182,24 +182,29 @@ function confirma() {
       document.querySelector('.tela').innerHTML =
         '<div class="aviso--gigante pisca">FIM</div>'
       console.log(votos)
+      setTimeout(function () {
+        location.reload();
+      }, 5000);
     }
   }
 }
 
-function registraVoto(nomeObj,setorObj){
+function registraVoto(nomeObj, setorObj) {
 
   let nome = nomeObj
   let setor = setorObj
-  
+
   $.ajax({
     method: 'POST',
     url: "/urna-main/database/gravar.php",
-    data: {numero: numero,
-          nome: nome,
-        setor: setor},
-}).done(function(result){
-  console.log(result);
-});
+    data: {
+      numero: numero,
+      nome: nome,
+      setor: setor
+    },
+  }).done(function (result) {
+    console.log(result);
+  });
 
 }
 comecarEtapa()
