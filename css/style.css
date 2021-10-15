@@ -155,6 +155,9 @@ body{
     background-color: #fff;
     text-align: center;
     font-size: 14px;
+    filter: grayscale(1);
+    width: 130px;
+    height: 180px;
 }
 .d-1-image img {
     width: 100%;

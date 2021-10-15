@@ -20,43 +20,51 @@ let etapas = [
                 ]
             },
             {
-                numero:'13',
-                nome:'GIOVANA PEREIRA',
-                setor:'GESTAO DE PESSOAS',
-                fotos:[
-                    {url:'13.jpg', legenda: 'SDHDS'},
-                ]
-            },
-            {
                 numero:'12',
                 nome:'CHRISTINA BRASIL',
-                setor:'COORDENADORIA ESPECIAL DE POLITICAS PUBLICAS PARA MULHERES',
+                setor:'COORD. MULHERES',
                 fotos:[
                     {url:'12.jpg', legenda: 'SDHDS'},
                 ]
             },
             {
                 numero:'24',
-                nome:'ALOISIO LOPES',
-                setor:'COORDENADORIA ESPECIAL DE DIVERSIDADE SEXUAL',
+                nome:'FELIPE VASCONCELOS',
+                setor:'DIVERSIDADE',
                 fotos:[
                     {url:'24.jpg', legenda: 'SDHDS'},
                 ]
             },
             {
+                numero:'77',
+                nome:'DIOGO MELO',
+                setor:'COCECDH',
+                fotos:[
+                    {url:'77.jpg', legenda: 'SDHDS'},
+                ]
+            },
+            {
                 numero:'60',
-                nome:'ANA PAULA DUARTE',
-                setor:'COSAN',
+                nome:'MARIA JOSE',
+                setor:'CESUAS',
                 fotos:[
                     {url:'60.jpg', legenda: 'SDHDS'},
                 ]
             },
             {
-                numero:'77',
-                nome:'DIOGO MELO',
-                setor:'CENTROS DE CIDADANIA E DIREITOS HUMANOS',
+                numero:'55',
+                nome:'JOAO BALBINO',
+                setor:'TRANSPORTE',
                 fotos:[
-                    {url:'77.jpg', legenda: 'SDHDS'},
+                    {url:'55.jpg', legenda: 'SDHDS'},
+                ]
+            },
+            {
+                numero:'40',
+                nome:'JOSE CARLOS',
+                setor:'CEPB',
+                fotos:[
+                    {url:'40.jpg', legenda: 'SDHDS'},
                 ]
             },
         ]
